@@ -1,0 +1,57 @@
+@layer components {
+  .main-footer {
+    @apply bg-dark text-center;
+
+    @screen lg {
+      @apply text-left;
+    }
+
+    h4 {
+      @apply text-white font-telegraf text-2xl font-normal;
+    }
+
+    p {
+      @apply mb-2 font-light text-white;
+    }
+
+    ul {
+      @apply space-y-3 font-light font-gilroy;
+      li {
+        a {
+          @apply text-white;
+
+          &:hover {
+            @apply text-accent;
+          }
+        }
+      }
+    }
+
+    .flex-nav {
+      ul {
+        @screen md {
+          @apply flex space-x-10 space-y-0 justify-center font-telegraf;
+        }
+        li {
+          a {
+            @apply text-white font-normal;
+  
+            &:hover {
+              @apply text-white/50;
+            }
+          }
+        }
+      }
+    }
+
+
+    
+    a {
+      @apply text-white;
+
+      &:hover {
+        @apply text-primary;
+      }
+    }
+  }
+}

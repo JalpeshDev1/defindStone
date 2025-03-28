@@ -1,0 +1,22 @@
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  .section {
+    @apply mb-14;
+
+    @screen md {
+      @apply mb-20;
+    }
+
+    @screen lg {
+      @apply mb-32;
+    }
+  }
+
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+}

@@ -1,0 +1,15 @@
+.columned-layout {
+
+    .lg:grid-cols-2 {
+        .column {
+            @apply p-4 lg:p-12;
+        }
+    }
+
+    .lg:grid-cols-4 {
+        .column {
+            @apply p-4 lg:p-6;
+        }
+    }
+
+}

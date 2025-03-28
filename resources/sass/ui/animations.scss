@@ -1,0 +1,130 @@
+@media(max-width: 1023px) {
+.line {
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    @apply text-center;
+
+    span {
+        position: absolute;
+        line-height: 3.2rem;
+        
+        @apply left-1/2 -translate-x-1/2 w-full;
+    }
+}
+.hero-section {
+   p{
+    text-align:center;
+   }
+}
+    
+}
+
+@media(min-width: 1024px) {
+    .line {
+        height: 90px;
+        position: relative;
+        overflow: hidden;
+        @apply text-left;
+
+        span {
+            position: absolute;
+            line-height: 5.2rem;
+
+        }
+    }
+}
+
+@media(min-width: 1921px) {
+    .line {
+        height: 90px;
+
+        span {
+            line-height: 5.2rem;
+        }
+    }
+}
+
+.paragraph {
+    p {
+        @apply text-2xl;
+
+        @screen lg {
+            @apply text-4xl;
+        }
+    }
+
+    p .char {
+        visibility: hidden;
+    }
+}
+
+.horizontal-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.horizontal-wrapper {
+    display: flex;
+}
+
+.panel {
+    width: 90vw;
+    flex-shrink: 0;
+    display: flex;
+
+    @screen lg {
+        width: 50vw;
+    }
+}
+
+.connecting-line line {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+}
+
+.reveal {
+    visibility: hidden;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform-origin: left;
+      }
+}
+
+
+@media screen and (max-width:640px) {
+    .about-product-wrapper{
+        p {
+            font-size:1.125rem;
+        }
+    }
+    
+  .stone-aesthetic-wrapper { 
+        p{
+            font-size:1.125rem;
+        }
+    }
+}
+
+   .about-product-wrapper{
+            p {
+            font-size:1.313rem;
+            font-weight:400;
+            margin-bottom:0;
+            font-family:"Gilroy", "sans-serif";
+        }
+    }
+    
+  .stone-aesthetic-wrapper { 
+        p{
+            font-size:1.313rem;
+            font-weight:400;
+            margin-bottom:0;
+            font-family:"Gilroy", "sans-serif";
+        }
+    }

@@ -1,0 +1,130 @@
+  #tabs-wrapper {
+      background: #fff;
+      color: #000;
+      box-sizing: border-box;
+      width: 100%;
+      line-height: 1.8em;
+  }
+
+  #tabs-wrapper:before,
+  #tabs-wrapper:after {
+      box-sizing: border-box;
+  }
+
+  .section-tab {
+      zoom: 1;
+      position: relative;
+      height: auto;
+  }
+
+  .section-tab:after,
+  .section-tab:before {
+      box-sizing: border-box;
+      content: "";
+      display: table;
+  }
+
+  .section-tab:after {
+      clear: both;
+  }
+
+  .section-tab .tab-title {
+      @apply bg-white;
+
+      &.active {
+          @apply border-none;
+      }
+  }
+
+  .section-tab .tab-title .title-container {
+      @apply bg-white p-3;
+      @screen lg {
+            @apply p-6;
+      }
+  }
+
+  .section-tab h4:before,
+  section p:before,
+  .section-tab h4:after,
+  section p:after {
+      box-sizing: border-box;
+  }
+
+  section .tab-content {
+      zoom: 1;
+      position: relative;
+      height: auto;
+      min-height: 100%;
+      border-left: none;
+      display: none;
+      padding: 1em 0;
+  }
+
+  .section-tab .tab-content:after,
+  .section-tab .tab-content:before {
+      box-sizing: border-box;
+      content: "";
+      display: table;
+  }
+
+  .section-tab .tab-content:after {
+      clear: both;
+  }
+
+  .section-tab .active .title-container {
+      cursor: default;
+      @apply bg-accent text-white ease-in-out duration-200;
+  }
+
+  .svg-icon {
+      @apply size-8 border border-primary rounded-full flex items-center justify-center cursor-pointer;
+
+      @screen lg {
+          @apply size-10;
+      }
+  }
+
+  .section-tab .active+.tab-title {
+      @apply border-none;
+
+  }
+
+  .section-tab .active {
+
+      .svg-icon {
+          @apply border-white text-white rotate-[-45deg] ease-in-out duration-200;
+
+      }
+  }
+
+
+  .section-tab .active img {
+      @apply invert brightness-100;
+  }
+
+  .section-tab .active+.tab-content {
+      display: block;
+  }
+
+  @media screen and (min-width: 600px) {
+
+      .section-tab .tab-title {
+          position: relative;
+          width: 48%;
+          height: 20%;
+          //   display: block;
+      }
+
+      .section-tab .tab-content {
+          position: absolute;
+          width: 50%;
+          right: 0;
+          top: 0;
+          padding: 0 1em;
+      }
+
+      //   .section-tab .active {
+      //       background: #FFF;
+      //   }
+
+  }

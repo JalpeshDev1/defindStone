@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//Core
+@import 'core/layout';
+@import 'core/mixins';
+@import 'core/typography';
+@import 'core/slider';
+@import 'core/forms';
+
+//Components
+@import 'components/layout/header';
+@import 'components/layout/footer';
+@import 'lightgallery/scss/lightgallery-bundle.scss';
+
+//Blocks
+@import 'components/blocks/hero';
+@import 'components/blocks/buttons';
+@import 'components/blocks/slider';
+@import 'components/blocks/marquee';
+@import 'components/blocks/columned-layout';
+@import 'components/blocks/accordion';
+@import 'components/blocks/frequently-asked-questions';
+@import 'components/blocks/video';
+@import 'components/blocks/product-display';
+@import 'components/blocks/tabbed-content';
+@import 'components/blocks/grid';
+@import 'components/blocks/packages';
+@import 'components/blocks/gallery';
+@import 'components/blocks/vertical-tabs';
+
+//UI
+@import 'ui/animations';
+@import 'ui/scrollbars';

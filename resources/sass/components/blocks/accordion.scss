@@ -1,0 +1,45 @@
+// Accordion
+
+.accordion {
+    & .js-toggle {
+      &.active {
+        h3 {
+          @apply text-primary;
+        }
+        .plus {
+          &:before {
+            @apply rotate-90;
+          }
+          &:after {
+            @apply rotate-180;
+          }
+          &:after,
+          &:before {
+            @apply bg-primary;
+          }
+        }
+      }
+    }
+    .toggle-container:not(.active) {
+      @apply hidden;
+    }
+  }
+  
+  .plus {
+    &:before,
+    &:after {
+      content: "";
+      @apply bg-tertiary absolute transition-all ease-in-out duration-300;
+    }
+  
+    &:before {
+      @apply top-0 left-1/2 h-full w-0.5 ml-[1px];
+      margin-left: -1px;
+    }
+  
+    &:after {
+      @apply top-1/2 left-0 w-full h-0.5;
+      margin-top: -1px;
+    }
+  }
+  

@@ -1,0 +1,50 @@
+@layer base {
+
+  .button {
+    @apply text-center py-2.5 px-9 w-4/5 font-telegraf block mx-auto rounded-full leading-[1] text-[15px];
+
+    @screen lg {
+      @apply w-fit mx-0 flex;
+    }
+
+    &--primary {
+      @apply bg-tertiary border-tertiary border text-dark;
+
+      &:hover {
+        @apply bg-white transition-all ease-in-out duration-100 text-dark;
+      }
+    }
+
+    &--secondary {
+      @apply bg-dark text-light border-dark border;
+
+      &:hover {
+        @apply bg-white transition-all ease-in-out duration-100 text-dark;
+      }
+    }
+
+    &--outline {
+      @apply text-dark border-primary border;
+
+      &:hover {
+        @apply bg-primary transition-all ease-in-out duration-100 text-light;
+      }
+    }
+
+    &--outlinewhite {
+      @apply text-white border-white border;
+
+      &:hover {
+        @apply bg-white transition-all ease-in-out duration-100 text-primary;
+      }
+    }
+
+    &--white {
+      @apply text-primary border-white bg-white border;
+
+      &:hover {
+        @apply bg-transparent transition-all ease-in-out duration-100 text-white;
+      }
+    }
+  }
+}

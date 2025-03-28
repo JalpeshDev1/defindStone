@@ -1,0 +1,57 @@
+.faq {
+    .accordian {
+        @apply max-w-[1000px] mx-auto;
+
+        @screen lg {
+            @apply w-[90%];
+        }
+    }
+
+    .accordian-item {
+        @apply my-4 text-dark;
+    }
+
+    .accordian-item-header {
+
+        @apply cursor-pointer relative flex items-center min-h-[3.5rem] pr-12 font-medium;
+
+        @screen lg {
+            @apply py-4;
+        }
+
+        &.active {
+            @apply text-primary;
+        }
+
+        h4 {
+            @apply text-base leading-[1.2];
+
+            @screen lg {
+                @apply text-2xl;
+            }
+        }
+    }
+
+    .accordian-item-header::after {
+        content: "\002B";
+        @apply absolute right-4 font-normal text-4xl ease-in-out transition-all duration-200
+    }
+
+    .accordian-item-header.active::after {
+        content: "\2212";
+    }
+
+    .accordian-item-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+
+        h2,h3,h4 {
+            @apply font-prompt;
+        }
+    }
+
+    .accordian-item-body-content {
+        @apply leading-[1.5] py-4;
+    }
+}

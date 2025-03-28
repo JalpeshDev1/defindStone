@@ -1,0 +1,69 @@
+.responsive-tabs {
+
+    h2,
+    h3,
+    h4 {
+        @apply mb-4;
+    }
+}
+
+.responsive-tabs dt {
+    padding: 0.5em;
+    cursor: pointer;
+    @apply border-tertiary font-semibold rounded-full text-center bg-gray-100 mx-2 my-2;
+
+    &:hover {
+        @apply border-tertiary bg-tertiary transition-all duration-75 ease-in-out font-semibold rounded-full;
+    }
+}
+
+.responsive-tabs dt~dt {
+    @apply border-tertiary;
+}
+
+.responsive-tabs .active {
+    @apply bg-tertiary;
+}
+
+.responsive-tabs dd {
+    display: none;
+    margin-left: 0;
+    padding: 1em 0.5em;
+
+    @screen lg {
+        padding: 3em 0.5em;
+    }
+}
+
+.responsive-tabs .active+dd {
+    display: block;
+}
+
+.responsive-tabs img {
+    max-width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .responsive-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        // @apply space-x-4
+    }
+
+    .responsive-tabs dt {
+        flex-grow: 1;
+        @apply border-secondary text-center;
+    }
+
+    .responsive-tabs dt~dt {
+        border-top: 0;
+    }
+
+    .responsive-tabs dd {
+        order: 2;
+        padding: 2em 3em;
+        @apply max-w-5xl mx-auto;
+    }
+
+}

@@ -1,0 +1,18 @@
+.hero {
+
+  &.hero-section {
+    clip-path: ellipse(100% 80% at 50% 20%);
+  }
+
+  ul {
+    @apply pl-8 list-outside list-disc;
+
+    li {
+      @apply mb-2;
+    }
+  }
+}
+
+
+
+  

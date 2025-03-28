@@ -1,0 +1,25 @@
+.packages {
+    ul {
+        //@apply text-left;
+
+        li {
+            @apply font-medium py-2 border-t;
+
+            &:first-child {
+                @apply border-t-0;
+            }
+
+            @screen lg {
+                @apply text-lg;
+            }
+        }
+        //place an icon before the list item
+        // li::before {
+        //     content: '\2022';
+        //     //color: $primary-color;
+        //     display: inline-block;
+        //     width: 1em;
+        //     margin-left: -1em;
+        // }
+    }
+}

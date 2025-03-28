@@ -1,0 +1,93 @@
+.wpcf7-spinner {
+    display: block;
+    margin: 0;
+}
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+    border-color: #ffb900;
+    @apply w-fit text-yellow-400;
+}
+
+.wpcf7-form {
+
+    input[type=submit],
+    button[type=submit] {
+        @apply bg-primary text-white mt-4 font-semibold mx-auto text-center w-full py-4 rounded-full;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    textarea,
+    select {
+        @apply text-gray-800 px-4 bg-transparent;
+    }
+
+    input::placeholder {
+        opacity: 1;
+        @apply text-primary;
+    }
+}
+
+/* Form input and button styles */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 8px;
+    margin: 5px 0;
+    border-bottom: 1px solid #475362;
+    box-sizing: border-box;
+    font-size: 16px;
+    //background-color: #fff;
+}
+
+.wpcf7-not-valid-tip {
+    @apply text-red-100;
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+}
+
+
+/* For screens up to 480px wide */
+@media (max-width: 480px) {
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea,
+    select {
+        font-size: 14px;
+    }
+}
+
+.news-letter {
+    form {
+        @apply flex flex-wrap justify-end;
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+           @apply focus:outline-none focus:border-b-tertiary text-white w-full;
+           border-bottom: 1px solid #ccc;
+        }
+
+        input[type=submit],
+        button[type=submit] {
+            @apply bg-white size-7 rounded-full -ml-6 py-0 cursor-pointer relative z-10;
+        }
+
+        input::placeholder {
+            opacity: 1;
+            @apply text-white/90;
+        }
+    }
+}

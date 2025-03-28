@@ -1,0 +1,28 @@
+// .swiper-wrapper {
+//     @apply min-h-[500px];
+
+//     @screen lg {
+//         @apply min-h-[600px]
+//     }
+// }
+.swiper-pagination {
+    @apply mt-6 relative;
+    .swiper-pagination-bullet {
+        @apply bg-primary h-1 w-4;
+    }
+}
+
+.product-slider {
+
+    .swiper-slide {
+        @apply h-[400px] duration-100 ease-in-out delay-100 shadow-xl #{!important};
+
+        p {
+            @apply text-[17px];
+        }
+
+        img {
+            @apply absolute top-0 left-0 h-full w-full;
+        }
+    }
+}
